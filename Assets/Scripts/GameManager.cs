@@ -32,7 +32,9 @@ public class GameManager : MonoBehaviour
         {
             YandexGame.savesData.HighScore = score;
             ui.SetScore(score);
-            YandexGame.NewLeaderboardScores("main", score);
+            YandexGame.NewLeaderboardScores("top", score);
+
+            YandexGame.SaveProgress();
         }
 
         score = 0;
